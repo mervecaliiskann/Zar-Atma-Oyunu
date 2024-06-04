@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgZar2: UIImageView!
     @IBOutlet weak var lblSetSonucu: UILabel!
     
+    var oyuncuPuanlari = (birinciOyuncuPuani : 0 , ikinciOyuncuPuani : 0)
+    var oyuncuSkoru = (birinciOyuncuSkoru : 0, ikinciOyuncuSkoru : 0)
+    var oyuncuSira : Int = 1
+    var maxSetSayisi : Int = 5
+    var suankiSet : Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
