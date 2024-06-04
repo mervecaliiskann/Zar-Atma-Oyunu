@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         }
     }
 
+//    Telefonu sallamak için yazılan method;
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        print("Telefon sallandı.")
+    }
 
 }
 
