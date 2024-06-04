@@ -40,6 +40,8 @@ class ViewController: UIViewController {
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         print("Telefon sallandı.")
         zarDegerleriniUret()
+    func setSonucu(zar1: Int, zar2: Int) {
+        
     }
     func zarDegerleriniUret() {
         let zar1 = arc4random_uniform(6)+1 // rastgele sayı üretmesi için yazılan methodtur. 0-5 arasında bir sayı üretir. Fakar 1 eklersek 1 ile 6 arasında bir deger üretir.
@@ -47,6 +49,7 @@ class ViewController: UIViewController {
         print("Zar1 : \(zar1) - Zar2 : \(zar2)" )
         imgZar1.image = UIImage(named: String(zar1))
         imgZar2.image = UIImage(named: String(zar2))
+        setSonucu(zar1: Int(zar1), zar2: Int(zar2))
     }
 
 }
