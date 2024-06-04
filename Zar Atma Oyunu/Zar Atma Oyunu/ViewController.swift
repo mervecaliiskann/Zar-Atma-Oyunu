@@ -30,6 +30,11 @@ class ViewController: UIViewController {
 //        Arka plana görüntü aktarmak için;
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "arkaPlan")!)
        
+        //        Arka plana görüntü aktarmak için;
+        if let arkapkan = UIColor(named: "arkaPlan") {
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "arkaPlan")!)
+            
+        }
     }
 
 
