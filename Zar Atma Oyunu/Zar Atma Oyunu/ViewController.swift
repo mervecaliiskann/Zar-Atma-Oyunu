@@ -89,6 +89,20 @@ class ViewController: UIViewController {
                 lblSetSonucu.text = "Oyunun Galibi 1. Oyuncudur. TEBRİKLER!"
             }else {
                 lblSetSonucu.text = "Oyunun Galibi 2. Oyuncudur. TEBRİKLER!"
+        print("Kod1")
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            let zar1 = arc4random_uniform(6)+1 // rastgele sayı üretmesi için yazılan methodtur. 0-5 arasında bir sayı üretir. Fakar 1 eklersek 1 ile 6 arasında bir deger üretir.
+            let zar2 = arc4random_uniform(6)+1
+            print("Zar1 : \(zar1) - Zar2 : \(zar2)" )
+            self.imgZar1.image = UIImage(named: String(zar1))
+            self.imgZar2.image = UIImage(named: String(zar2))
+            self.setSonucu(zar1: Int(zar1), zar2: Int(zar2))
+            if self.suankiSet > self.maxSetSayisi {
+                if self.oyuncuSkoru.birinciOyuncuSkoru > self.oyuncuSkoru.ikinciOyuncuSkoru {
+                    self.lblSetSonucu.text = "Oyunun Galibi 1. Oyuncudur. TEBRİKLER!"
+                }else {
+                    self.lblSetSonucu.text = "Oyunun Galibi 2. Oyuncudur. TEBRİKLER!"
+                }
             }
         }
     }
