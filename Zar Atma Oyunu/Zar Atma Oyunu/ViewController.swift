@@ -50,6 +50,12 @@ class ViewController: UIViewController {
             lblSetSonucu.text = "Sıra 2. Oyuncuda"
             oyuncuSira = 2
             lblOyuncu2Puan.text = "0" // başa dönüyoruz.
+        } else {
+            oyuncuPuanlari.ikinciOyuncuPuani = zar1 + zar2
+            lblOyuncu2Puan.text = String(oyuncuPuanlari.ikinciOyuncuPuani)
+            imgOyuncu1Durum.image = UIImage(named: "onay")
+            imgOyuncu2Durum.image = UIImage(named: "bekle")
+            oyuncuSira = 1
     }
     func zarDegerleriniUret() {
         let zar1 = arc4random_uniform(6)+1 // rastgele sayı üretmesi için yazılan methodtur. 0-5 arasında bir sayı üretir. Fakar 1 eklersek 1 ile 6 arasında bir deger üretir.
