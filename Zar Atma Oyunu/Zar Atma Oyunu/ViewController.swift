@@ -78,17 +78,6 @@ class ViewController: UIViewController {
             }
     }
     func zarDegerleriniUret() {
-        let zar1 = arc4random_uniform(6)+1 // rastgele sayı üretmesi için yazılan methodtur. 0-5 arasında bir sayı üretir. Fakar 1 eklersek 1 ile 6 arasında bir deger üretir.
-        let zar2 = arc4random_uniform(6)+1
-        print("Zar1 : \(zar1) - Zar2 : \(zar2)" )
-        imgZar1.image = UIImage(named: String(zar1))
-        imgZar2.image = UIImage(named: String(zar2))
-        setSonucu(zar1: Int(zar1), zar2: Int(zar2))
-        if suankiSet > maxSetSayisi {
-            if oyuncuSkoru.birinciOyuncuSkoru > oyuncuSkoru.ikinciOyuncuSkoru {
-                lblSetSonucu.text = "Oyunun Galibi 1. Oyuncudur. TEBRİKLER!"
-            }else {
-                lblSetSonucu.text = "Oyunun Galibi 2. Oyuncudur. TEBRİKLER!"
         print("Kod1")
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             let zar1 = arc4random_uniform(6)+1 // rastgele sayı üretmesi için yazılan methodtur. 0-5 arasında bir sayı üretir. Fakar 1 eklersek 1 ile 6 arasında bir deger üretir.
