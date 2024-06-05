@@ -84,6 +84,13 @@ class ViewController: UIViewController {
         imgZar1.image = UIImage(named: String(zar1))
         imgZar2.image = UIImage(named: String(zar2))
         setSonucu(zar1: Int(zar1), zar2: Int(zar2))
+        if suankiSet > maxSetSayisi {
+            if oyuncuSkoru.birinciOyuncuSkoru > oyuncuSkoru.ikinciOyuncuSkoru {
+                lblSetSonucu.text = "Oyunun Galibi 1. Oyuncudur. TEBRİKLER!"
+            }else {
+                lblSetSonucu.text = "Oyunun Galibi 2. Oyuncudur. TEBRİKLER!"
+            }
+        }
     }
 
 }
