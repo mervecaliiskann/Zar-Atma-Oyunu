@@ -72,6 +72,10 @@ class ViewController: UIViewController {
                 suankiSet += 1
                 lblOyuncu2Skor.text = String(oyuncuSkoru.ikinciOyuncuSkoru)
                 
+            }else{
+                // oyun berabere kaldı. Setsayısını değiştirmeyecegiz.
+                lblSetSonucu.text = "\(suankiSet). Set Berabere Sona Erdi."
+            }
     }
     func zarDegerleriniUret() {
         let zar1 = arc4random_uniform(6)+1 // rastgele sayı üretmesi için yazılan methodtur. 0-5 arasında bir sayı üretir. Fakar 1 eklersek 1 ile 6 arasında bir deger üretir.
